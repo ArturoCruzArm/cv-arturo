@@ -246,100 +246,365 @@ li {
     box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
 }
 
-/* Estilos para impresión/PDF */
+/* Modal de instrucciones */
+.print-instructions {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+}
+
+.instructions-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+}
+
+.instructions-content h3 {
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 0.5rem;
+}
+
+.instructions-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.instructions-content li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.close-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    width: 100%;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+    background: #1d4ed8;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Estilos para impresión/PDF - Optimizado */
 @media print {
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
     body {
-        background: white;
-        font-size: 11pt;
-        line-height: 1.4;
+        background: white !important;
+        font-size: 10.5pt;
+        line-height: 1.35;
+        color: #000 !important;
+        margin: 0;
+        padding: 0;
     }
     
     .container {
         max-width: none;
         margin: 0;
-        padding: 0;
+        padding: 0.8cm;
         box-shadow: none;
         min-height: auto;
+        background: white;
     }
     
     .no-print {
         display: none !important;
     }
     
+    /* Header optimizado */
+    .header {
+        border-bottom: 2pt solid #2563eb;
+        padding-bottom: 0.8rem;
+        margin-bottom: 1.2rem;
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+    
     .profile-section {
+        display: flex;
         flex-direction: row;
         align-items: flex-start;
-    }
-    
-    .profile-image {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .profile-info h1 {
-        font-size: 1.8rem;
-    }
-    
-    .profile-info h2 {
-        font-size: 1rem;
-    }
-    
-    .contact-info {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.3rem;
-    }
-    
-    .contact-item {
-        font-size: 0.85rem;
-    }
-    
-    .section {
-        margin-bottom: 1.5rem;
+        gap: 1.2rem;
         break-inside: avoid;
     }
     
-    .section h3 {
-        font-size: 1.2rem;
-        break-after: avoid;
+    .profile-image {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        border: 2pt solid #e5e7eb;
+        flex-shrink: 0;
     }
     
-    .experience-item,
-    .education-item,
-    .certification-group {
+    .profile-info h1 {
+        font-size: 16pt;
+        font-weight: 700;
+        color: #1e293b !important;
+        margin-bottom: 0.3rem;
+        line-height: 1.2;
+    }
+    
+    .profile-info h2 {
+        font-size: 9.5pt;
+        font-weight: 500;
+        color: #2563eb !important;
+        margin-bottom: 0.8rem;
+        line-height: 1.3;
+    }
+    
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.2rem;
+        font-size: 8.5pt;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        margin-bottom: 0.1rem;
+    }
+    
+    .contact-item .icon {
+        font-size: 8.5pt;
+        width: 12pt;
+    }
+    
+    /* Secciones optimizadas */
+    .section {
+        margin-bottom: 1rem;
         break-inside: avoid;
         page-break-inside: avoid;
     }
     
-    .skills-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
+    .section h3 {
+        font-size: 11pt;
+        font-weight: 600;
+        color: #1e293b !important;
+        border-bottom: 1pt solid #e5e7eb;
+        padding-bottom: 0.3rem;
+        margin-bottom: 0.6rem;
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+    
+    .section p {
+        margin-bottom: 0.5rem;
+        text-align: justify;
+        font-size: 9.5pt;
+        line-height: 1.35;
+    }
+    
+    /* Experiencia optimizada */
+    .experience-item {
+        margin-bottom: 0.8rem;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .experience-item h4 {
+        font-size: 10pt;
+        font-weight: 600;
+        color: #1e293b !important;
+        margin-bottom: 0.2rem;
+        break-after: avoid;
+    }
+    
+    .company {
+        font-weight: 500;
+        color: #2563eb !important;
+        margin-bottom: 0.2rem;
+        font-size: 9pt;
+    }
+    
+    .period {
+        font-size: 8.5pt;
+        color: #6b7280 !important;
+        font-style: italic;
+        margin-bottom: 0.4rem;
+    }
+    
+    .location {
+        font-size: 8.5pt;
+        color: #6b7280 !important;
+        font-style: italic;
+    }
+    
+    /* Educación optimizada */
+    .education-item {
+        margin-bottom: 0.7rem;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .education-item h4 {
+        font-size: 9.5pt;
+        font-weight: 600;
+        color: #1e293b !important;
+        margin-bottom: 0.2rem;
+    }
+    
+    .institution {
+        font-weight: 500;
+        color: #2563eb !important;
+        margin-bottom: 0.2rem;
+        font-size: 9pt;
+    }
+    
+    /* Certificaciones optimizadas */
+    .certification-group {
+        margin-bottom: 0.8rem;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .certification-group h4 {
+        font-size: 9.5pt;
+        font-weight: 600;
+        color: #1e293b !important;
+        margin-bottom: 0.2rem;
     }
     
     .certification-list {
+        display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 0.2rem;
+        list-style: none;
+        font-size: 8.5pt;
+    }
+    
+    .certification-list li::before {
+        content: '✓ ';
+        color: #16a34a !important;
+        font-weight: bold;
+    }
+    
+    /* Skills optimizadas */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    
+    .skills-column h4 {
+        font-size: 9.5pt;
+        font-weight: 600;
+        color: #1e293b !important;
+        margin-bottom: 0.4rem;
+    }
+    
+    .skills-column ul {
+        font-size: 8.5pt;
+        line-height: 1.3;
+    }
+    
+    /* Listas optimizadas */
+    ul {
+        padding-left: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    li {
+        margin-bottom: 0.2rem;
+        font-size: 9pt;
+        line-height: 1.3;
     }
     
     .soft-skills {
+        display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 0.2rem;
+        font-size: 9pt;
     }
     
-    /* Controlar saltos de página */
-    .header {
-        break-after: avoid;
+    /* Footer optimizado */
+    .footer {
+        text-align: center;
+        margin-top: 1rem;
+        padding-top: 0.5rem;
+        border-top: 1pt solid #e5e7eb;
+        color: #6b7280 !important;
+        font-size: 8.5pt;
+        break-inside: avoid;
     }
     
+    /* Controlar saltos de página específicos */
     h3, h4 {
         break-after: avoid;
+        page-break-after: avoid;
+        orphans: 3;
+        widows: 3;
     }
     
     ul, ol {
         break-inside: avoid;
+        page-break-inside: avoid;
     }
     
-    /* Ajustar márgenes para PDF */
+    /* Configuración de página A4 */
     @page {
-        margin: 1.5cm;
         size: A4;
+        margin: 1.2cm 1cm 1.2cm 1cm;
+        
+        @top-center {
+            content: none;
+        }
+        
+        @bottom-center {
+            content: none;
+        }
+    }
+    
+    /* Forzar elementos críticos a mantenerse juntos */
+    .profile-section,
+    .experience-item,
+    .education-item,
+    .certification-group {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* Evitar líneas huérfanas y viudas */
+    p, li {
+        orphans: 2;
+        widows: 2;
     }
 }
 

@@ -62,10 +62,10 @@
 
             <div class="experience-item">
                 <h4>Organizador de Hackathon</h4>
-                <p class="company">Tecnológico de Monterrey - Campus León y Puebla</p>
+                <p class="company">Tecnológico de Monterrey - Campus Puebla</p>
                 <p class="period">2019</p>
                 <ul>
-                    <li>Coordinación y organización de eventos tecnológicos en múltiples campus</li>
+                    <li>Coordinación y organización de evento tecnológico</li>
                     <li>Gestión de equipos de desarrollo</li>
                     <li>Evaluación de proyectos innovadores</li>
                     <li>Promoción de la cultura tecnológica y emprendimiento</li>
@@ -223,7 +223,44 @@
     </div>
 
     <div class="print-button-container no-print">
-        <button onclick="window.print()" class="print-button">📄 Imprimir como PDF</button>
+        <button onclick="optimizedPrint()" class="print-button">📄 Imprimir como PDF</button>
+        <div class="print-instructions" id="printInstructions" style="display: none;">
+            <div class="instructions-content">
+                <h3>📋 Instrucciones para PDF perfecto:</h3>
+                <ul>
+                    <li>✅ Selecciona <strong>"Guardar como PDF"</strong></li>
+                    <li>✅ Formato: <strong>A4</strong></li>
+                    <li>✅ Márgenes: <strong>Predeterminado</strong></li>
+                    <li>✅ Escala: <strong>100%</strong></li>
+                    <li>✅ Incluir gráficos de fondo: <strong>✓</strong></li>
+                </ul>
+                <button onclick="hideInstructions()" class="close-btn">Entendido</button>
+            </div>
+        </div>
     </div>
+
+    <script>
+        function optimizedPrint() {
+            // Mostrar instrucciones primero
+            document.getElementById('printInstructions').style.display = 'flex';
+            
+            // Optimizar para impresión
+            setTimeout(() => {
+                window.print();
+            }, 500);
+        }
+        
+        function hideInstructions() {
+            document.getElementById('printInstructions').style.display = 'none';
+        }
+        
+        // Cerrar instrucciones al hacer clic fuera
+        document.addEventListener('click', function(event) {
+            const instructions = document.getElementById('printInstructions');
+            if (event.target === instructions) {
+                hideInstructions();
+            }
+        });
+    </script>
 </body>
 </html>
