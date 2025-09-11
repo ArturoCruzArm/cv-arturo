@@ -1,0 +1,383 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8fafc;
+}
+
+.container {
+    max-width: 210mm;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+
+/* Header y perfil */
+.header {
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e5e7eb;
+    flex-shrink: 0;
+}
+
+.profile-info h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-item .icon {
+    font-size: 1rem;
+    width: 20px;
+}
+
+.contact-item a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 2rem;
+    break-inside: avoid;
+}
+
+.section h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e293b;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Experiencia */
+.experience-item {
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+}
+
+.experience-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+}
+
+.company {
+    font-weight: 500;
+    color: #2563eb;
+    margin-bottom: 0.3rem;
+}
+
+.period {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
+.location {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* Educación */
+.education-item {
+    margin-bottom: 1.2rem;
+    break-inside: avoid;
+}
+
+.education-item h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+}
+
+.institution {
+    font-weight: 500;
+    color: #2563eb;
+    margin-bottom: 0.3rem;
+}
+
+/* Certificaciones */
+.certification-group {
+    margin-bottom: 1.5rem;
+    break-inside: avoid;
+}
+
+.certification-group h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+}
+
+.certification-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem;
+    list-style: none;
+}
+
+.certification-list li::before {
+    content: '✓ ';
+    color: #16a34a;
+    font-weight: bold;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.skills-column h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.8rem;
+}
+
+/* Listas */
+ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.4rem;
+}
+
+.soft-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
+}
+
+/* Botón de impresión */
+.print-button-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.print-button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+}
+
+.print-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Estilos para impresión/PDF */
+@media print {
+    body {
+        background: white;
+        font-size: 11pt;
+        line-height: 1.4;
+    }
+    
+    .container {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        min-height: auto;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .profile-section {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .profile-info h2 {
+        font-size: 1rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.3rem;
+    }
+    
+    .contact-item {
+        font-size: 0.85rem;
+    }
+    
+    .section {
+        margin-bottom: 1.5rem;
+        break-inside: avoid;
+    }
+    
+    .section h3 {
+        font-size: 1.2rem;
+        break-after: avoid;
+    }
+    
+    .experience-item,
+    .education-item,
+    .certification-group {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .certification-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .soft-skills {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Controlar saltos de página */
+    .header {
+        break-after: avoid;
+    }
+    
+    h3, h4 {
+        break-after: avoid;
+    }
+    
+    ul, ol {
+        break-inside: avoid;
+    }
+    
+    /* Ajustar márgenes para PDF */
+    @page {
+        margin: 1.5cm;
+        size: A4;
+    }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .profile-image {
+        align-self: center;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .certification-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .soft-skills {
+        grid-template-columns: 1fr;
+    }
+    
+    .print-button-container {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
