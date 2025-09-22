@@ -1,43 +1,61 @@
 # CV - Juan Arturo Cruz Armenta
 
-Curriculum Vitae digital de Juan Arturo Cruz Armenta - Programador .NET y Desarrollador Web
+## Especialista en Redes y Ciberseguridad | Soporte Técnico | Defensa Perimetral
 
-## Ver CV Online
+Curriculum Vitae digital profesional optimizado para GitHub Pages con diseño responsivo y funcionalidad de impresión PDF.
 
-Visita: [https://github.com/ArturoCruzArm/cv-arturo](https://github.com/ArturoCruzArm/cv-arturo)
+### 🌟 Características
 
-## Características
-
-- ✅ Diseño profesional y responsivo
+- ✅ Diseño profesional y moderno
+- ✅ Completamente responsivo (móvil, tablet, desktop)
 - ✅ Optimizado para impresión PDF
 - ✅ Compatible con GitHub Pages
-- ✅ Botón de imprimir integrado
-- ✅ Información completa actualizada
+- ✅ Sin emojis - Formato completamente profesional
+- ✅ Enfoque especializado en redes y ciberseguridad
+- ✅ Botón de imprimir integrado con instrucciones
+- ✅ Tipografía Inter de Google Fonts
 
-## Cómo generar PDF
+### 🚀 Acceso Rápido
+
+**Ver CV online:** <https://arturocruzarm.github.io/cv-arturo>
+
+### 📋 Especialización Técnica
+
+- **Redes:** CCNA Routing & Switching, VLANs, OSPF, EIGRP, BGP
+- **Ciberseguridad:** Firewalls, IDS/IPS, análisis de vulnerabilidades
+- **Defensa Perimetral:** WAF, VPN, hardening de sistemas
+- **Telemetría:** SNMP, Syslog, NetFlow, monitoreo de red
+- **Soporte:** Nivel 2 y 3, gestión de incidentes, troubleshooting
+
+### 📄 Cómo generar PDF
 
 1. Abre el CV en tu navegador
-2. Haz clic en el botón "📄 Imprimir como PDF"
-3. En la ventana de impresión, selecciona "Guardar como PDF"
-4. Ajusta los márgenes si es necesario
+1. Haz clic en el botón “Imprimir como PDF”
+1. En la ventana de impresión:
+- Destino: “Guardar como PDF”
+- Formato: A4
+- Márgenes: Predeterminado
+- Escala: 100%
+- ✅ Incluir gráficos de fondo
 
-## Cómo configurar en GitHub Pages
+### 🛠️ Estructura del proyecto
 
-1. Sube estos archivos a tu repositorio de GitHub
-2. Ve a Settings → Pages
-3. Selecciona "Deploy from a branch"
-4. Elige "main" branch y "/ (root)"
-5. Guarda la configuración
+```
+cv-arturo/
+├── index.html          # Página principal del CV
+├── styles.css          # Estilos optimizados para web y PDF
+├── Captura.JPG         # Foto de perfil
+├── README.md           # Este archivo
+└── .github/
+    └── workflows/
+        └── pages.yml    # Configuración de GitHub Pages
+```
 
-Tu CV estará disponible en: `https://tuusuario.github.io/nombre-del-repo`
+### 🔧 Configuración de GitHub Pages
 
-## Archivos incluidos
+1. Ve a **Settings → Pages** en tu repositorio
+1. En **Source** selecciona **“GitHub Actions”**
+1. El workflow se ejecutará automáticamente en cada push a `main`
+1. Tu CV estará disponible en: `https://tuusuario.github.io/cv-arturo`
 
-- `index.html` - Página principal del CV
-- `styles.css` - Estilos optimizados para web y PDF
-- `captura.jpg` - Foto de perfil (debes subir tu imagen)
-- `README.md` - Este archivo de documentación
-
-## Actualización
-
-Para actualizar tu CV, simplemente edita el archivo `index.html` y haz push a GitHub. Los cambios se reflejarán automáticamente en GitHub Pages.
+### 
