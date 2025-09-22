@@ -1,648 +1,397 @@
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+- {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8fafc;
+font-family: ‘Inter’, -apple-system, BlinkMacSystemFont, ‘Segoe UI’, Roboto, sans-serif;
+line-height: 1.6;
+color: #333;
+background: #f8fafc;
+font-size: 14px;
 }
 
 .container {
-    max-width: 210mm;
-    margin: 0 auto;
-    background: white;
-    padding: 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    min-height: 100vh;
+max-width: 800px;
+margin: 0 auto;
+background: white;
+box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+min-height: 100vh;
 }
 
-/* Header y perfil */
 .header {
-    border-bottom: 3px solid #2563eb;
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+padding: 2rem;
+text-align: center;
 }
 
 .profile-section {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
+display: flex;
+align-items: center;
+gap: 2rem;
+flex-wrap: wrap;
 }
 
 .profile-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #e5e7eb;
-    flex-shrink: 0;
+width: 120px;
+height: 120px;
+border-radius: 50%;
+border: 4px solid rgba(255,255,255,0.3);
+object-fit: cover;
+flex-shrink: 0;
+}
+
+.profile-info {
+flex: 1;
+text-align: left;
+min-width: 300px;
 }
 
 .profile-info h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 0.5rem;
+font-size: 2.2rem;
+font-weight: 700;
+margin-bottom: 0.5rem;
+text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .profile-info h2 {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #2563eb;
-    margin-bottom: 1rem;
+font-size: 1.2rem;
+font-weight: 400;
+opacity: 0.9;
+margin-bottom: 1.5rem;
+line-height: 1.4;
 }
 
 .contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 0.8rem;
 }
 
 .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-size: 0.9rem;
 }
 
 .contact-item .icon {
-    font-size: 1rem;
-    width: 20px;
+font-size: 1rem;
+font-weight: 600;
 }
 
 .contact-item a {
-    color: #2563eb;
-    text-decoration: none;
+color: white;
+text-decoration: none;
+border-bottom: 1px solid rgba(255,255,255,0.3);
+transition: all 0.3s ease;
 }
 
 .contact-item a:hover {
-    text-decoration: underline;
+border-bottom-color: white;
 }
 
-/* Secciones */
 .section {
-    margin-bottom: 2rem;
-    break-inside: avoid;
+padding: 1.8rem 2rem;
+border-bottom: 1px solid #e2e8f0;
+}
+
+.section:last-child {
+border-bottom: none;
 }
 
 .section h3 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #1e293b;
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+color: #2d3748;
+font-size: 1.4rem;
+font-weight: 600;
+margin-bottom: 1.2rem;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.section h4 {
+color: #4a5568;
+font-size: 1.1rem;
+font-weight: 600;
+margin-bottom: 0.5rem;
 }
 
 .section p {
-    margin-bottom: 1rem;
-    text-align: justify;
+color: #718096;
+line-height: 1.7;
+margin-bottom: 1rem;
 }
 
-/* Experiencia */
 .experience-item {
-    margin-bottom: 1.5rem;
-    break-inside: avoid;
+margin-bottom: 2rem;
+padding: 1.2rem;
+background: #f8fafc;
+border-radius: 8px;
+border-left: 4px solid #667eea;
 }
 
-.experience-item h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 0.3rem;
+.experience-item:last-child {
+margin-bottom: 0;
 }
 
 .company {
-    font-weight: 500;
-    color: #2563eb;
-    margin-bottom: 0.3rem;
+color: #667eea;
+font-weight: 600;
+font-size: 1rem;
 }
 
 .period {
-    font-size: 0.9rem;
-    color: #6b7280;
-    font-style: italic;
-    margin-bottom: 0.8rem;
+color: #a0aec0;
+font-size: 0.9rem;
+font-style: italic;
+margin-bottom: 0.8rem;
 }
 
 .location {
-    font-size: 0.9rem;
-    color: #6b7280;
-    font-style: italic;
+color: #a0aec0;
+font-size: 0.85rem;
+font-style: italic;
 }
 
-/* Educación */
+.experience-item ul,
+.section ul:not(.soft-skills):not(.certification-list) {
+margin-left: 1.2rem;
+margin-top: 0.5rem;
+}
+
+.experience-item li,
+.section li {
+margin-bottom: 0.3rem;
+color: #4a5568;
+}
+
 .education-item {
-    margin-bottom: 1.2rem;
-    break-inside: avoid;
+margin-bottom: 1.5rem;
+padding-bottom: 1rem;
+border-bottom: 1px solid #e2e8f0;
 }
 
-.education-item h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 0.3rem;
+.education-item:last-child {
+border-bottom: none;
+margin-bottom: 0;
 }
 
 .institution {
-    font-weight: 500;
-    color: #2563eb;
-    margin-bottom: 0.3rem;
+color: #667eea;
+font-weight: 500;
 }
 
-/* Certificaciones */
 .certification-group {
-    margin-bottom: 1.5rem;
-    break-inside: avoid;
+margin-bottom: 1.8rem;
+padding: 1rem;
+background: #f8fafc;
+border-radius: 6px;
 }
 
-.certification-group h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 0.3rem;
+.certification-group:last-child {
+margin-bottom: 0;
 }
 
 .certification-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.3rem;
-    list-style: none;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 0.3rem;
+margin-top: 0.5rem;
+list-style: none;
+margin-left: 0;
 }
 
-.certification-list li::before {
-    content: '✓ ';
-    color: #16a34a;
-    font-weight: bold;
+.certification-list li {
+background: #e6fffa;
+color: #234e52;
+padding: 0.3rem 0.8rem;
+border-radius: 20px;
+font-size: 0.85rem;
+text-align: center;
+font-weight: 500;
 }
 
-/* Skills */
 .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
 }
 
-.skills-column h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 0.8rem;
+.skills-column ul {
+margin-left: 1rem;
 }
 
-/* Listas */
-ul {
-    padding-left: 1.2rem;
-    margin-bottom: 1rem;
+.skills-column li {
+margin-bottom: 0.5rem;
+color: #4a5568;
 }
 
-li {
-    margin-bottom: 0.4rem;
+.skills-column strong {
+color: #2d3748;
 }
 
 .soft-skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.3rem;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 0.5rem;
+list-style: none;
+margin-left: 0;
 }
 
-/* Footer */
+.soft-skills li {
+background: #f0fff4;
+color: #22543d;
+padding: 0.6rem 1rem;
+border-radius: 6px;
+border-left: 3px solid #38a169;
+}
+
 .footer {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #e5e7eb;
-    color: #6b7280;
+text-align: center;
+padding: 1.5rem;
+background: #f8fafc;
+color: #a0aec0;
+font-size: 0.85rem;
 }
 
-/* Botón de impresión */
 .print-button-container {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 1000;
+position: fixed;
+bottom: 2rem;
+right: 2rem;
+z-index: 1000;
 }
 
 .print-button {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    transition: all 0.3s ease;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+color: white;
+border: none;
+padding: 1rem 1.5rem;
+border-radius: 50px;
+font-size: 1rem;
+font-weight: 600;
+cursor: pointer;
+box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+transition: all 0.3s ease;
 }
 
 .print-button:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+transform: translateY(-2px);
+box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
 }
 
-/* Modal de instrucciones */
 .print-instructions {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-    backdrop-filter: blur(5px);
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.8);
+z-index: 2000;
+align-items: center;
+justify-content: center;
 }
 
 .instructions-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 500px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    animation: slideIn 0.3s ease;
+background: white;
+padding: 2rem;
+border-radius: 12px;
+max-width: 500px;
+text-align: left;
 }
 
 .instructions-content h3 {
-    color: #1e293b;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    border-bottom: 2px solid #2563eb;
-    padding-bottom: 0.5rem;
+color: #2d3748;
+margin-bottom: 1rem;
 }
 
 .instructions-content ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
+margin: 1rem 0;
 }
 
 .instructions-content li {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-    color: #374151;
+margin-bottom: 0.5rem;
+color: #4a5568;
 }
 
 .close-btn {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 500;
-    width: 100%;
-    font-size: 1rem;
-    transition: background 0.3s ease;
+background: #667eea;
+color: white;
+border: none;
+padding: 0.5rem 1.5rem;
+border-radius: 6px;
+cursor: pointer;
+margin-top: 1rem;
 }
 
-.close-btn:hover {
-    background: #1d4ed8;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9) translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-/* Estilos para impresión/PDF - Optimizado */
-@media print {
-    * {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-    
-    body {
-        background: white !important;
-        font-size: 10.5pt;
-        line-height: 1.35;
-        color: #000 !important;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .container {
-        max-width: none;
-        margin: 0;
-        padding: 0.8cm;
-        box-shadow: none;
-        min-height: auto;
-        background: white;
-    }
-    
-    .no-print {
-        display: none !important;
-    }
-    
-    /* Header optimizado */
-    .header {
-        border-bottom: 2pt solid #2563eb;
-        padding-bottom: 0.8rem;
-        margin-bottom: 1.2rem;
-        break-after: avoid;
-        page-break-after: avoid;
-    }
-    
-    .profile-section {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 1.2rem;
-        break-inside: avoid;
-    }
-    
-    .profile-image {
-        width: 85px;
-        height: 85px;
-        border-radius: 50%;
-        border: 2pt solid #e5e7eb;
-        flex-shrink: 0;
-    }
-    
-    .profile-info h1 {
-        font-size: 16pt;
-        font-weight: 700;
-        color: #1e293b !important;
-        margin-bottom: 0.3rem;
-        line-height: 1.2;
-    }
-    
-    .profile-info h2 {
-        font-size: 9.5pt;
-        font-weight: 500;
-        color: #2563eb !important;
-        margin-bottom: 0.8rem;
-        line-height: 1.3;
-    }
-    
-    .contact-info {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.2rem;
-        font-size: 8.5pt;
-    }
-    
-    .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 0.3rem;
-        margin-bottom: 0.1rem;
-    }
-    
-    .contact-item .icon {
-        font-size: 8.5pt;
-        width: 12pt;
-    }
-    
-    /* Secciones optimizadas */
-    .section {
-        margin-bottom: 1rem;
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-    
-    .section h3 {
-        font-size: 11pt;
-        font-weight: 600;
-        color: #1e293b !important;
-        border-bottom: 1pt solid #e5e7eb;
-        padding-bottom: 0.3rem;
-        margin-bottom: 0.6rem;
-        break-after: avoid;
-        page-break-after: avoid;
-    }
-    
-    .section p {
-        margin-bottom: 0.5rem;
-        text-align: justify;
-        font-size: 9.5pt;
-        line-height: 1.35;
-    }
-    
-    /* Experiencia optimizada */
-    .experience-item {
-        margin-bottom: 0.8rem;
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-    
-    .experience-item h4 {
-        font-size: 10pt;
-        font-weight: 600;
-        color: #1e293b !important;
-        margin-bottom: 0.2rem;
-        break-after: avoid;
-    }
-    
-    .company {
-        font-weight: 500;
-        color: #2563eb !important;
-        margin-bottom: 0.2rem;
-        font-size: 9pt;
-    }
-    
-    .period {
-        font-size: 8.5pt;
-        color: #6b7280 !important;
-        font-style: italic;
-        margin-bottom: 0.4rem;
-    }
-    
-    .location {
-        font-size: 8.5pt;
-        color: #6b7280 !important;
-        font-style: italic;
-    }
-    
-    /* Educación optimizada */
-    .education-item {
-        margin-bottom: 0.7rem;
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-    
-    .education-item h4 {
-        font-size: 9.5pt;
-        font-weight: 600;
-        color: #1e293b !important;
-        margin-bottom: 0.2rem;
-    }
-    
-    .institution {
-        font-weight: 500;
-        color: #2563eb !important;
-        margin-bottom: 0.2rem;
-        font-size: 9pt;
-    }
-    
-    /* Certificaciones optimizadas */
-    .certification-group {
-        margin-bottom: 0.8rem;
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-    
-    .certification-group h4 {
-        font-size: 9.5pt;
-        font-weight: 600;
-        color: #1e293b !important;
-        margin-bottom: 0.2rem;
-    }
-    
-    .certification-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.2rem;
-        list-style: none;
-        font-size: 8.5pt;
-    }
-    
-    .certification-list li::before {
-        content: '✓ ';
-        color: #16a34a !important;
-        font-weight: bold;
-    }
-    
-    /* Skills optimizadas */
-    .skills-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.8rem;
-    }
-    
-    .skills-column h4 {
-        font-size: 9.5pt;
-        font-weight: 600;
-        color: #1e293b !important;
-        margin-bottom: 0.4rem;
-    }
-    
-    .skills-column ul {
-        font-size: 8.5pt;
-        line-height: 1.3;
-    }
-    
-    /* Listas optimizadas */
-    ul {
-        padding-left: 1rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    li {
-        margin-bottom: 0.2rem;
-        font-size: 9pt;
-        line-height: 1.3;
-    }
-    
-    .soft-skills {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.2rem;
-        font-size: 9pt;
-    }
-    
-    /* Footer optimizado */
-    .footer {
-        text-align: center;
-        margin-top: 1rem;
-        padding-top: 0.5rem;
-        border-top: 1pt solid #e5e7eb;
-        color: #6b7280 !important;
-        font-size: 8.5pt;
-        break-inside: avoid;
-    }
-    
-    /* Controlar saltos de página específicos */
-    h3, h4 {
-        break-after: avoid;
-        page-break-after: avoid;
-        orphans: 3;
-        widows: 3;
-    }
-    
-    ul, ol {
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-    
-    /* Configuración de página A4 */
-    @page {
-        size: A4;
-        margin: 1.2cm 1cm 1.2cm 1cm;
-        
-        @top-center {
-            content: none;
-        }
-        
-        @bottom-center {
-            content: none;
-        }
-    }
-    
-    /* Forzar elementos críticos a mantenerse juntos */
-    .profile-section,
-    .experience-item,
-    .education-item,
-    .certification-group {
-        break-inside: avoid !important;
-        page-break-inside: avoid !important;
-    }
-    
-    /* Evitar líneas huérfanas y viudas */
-    p, li {
-        orphans: 2;
-        widows: 2;
-    }
-}
-
-/* Responsivo para móviles */
 @media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-    
-    .profile-section {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-    
-    .profile-image {
-        align-self: center;
-    }
-    
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
-    
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .certification-list {
-        grid-template-columns: 1fr;
-    }
-    
-    .soft-skills {
-        grid-template-columns: 1fr;
-    }
-    
-    .print-button-container {
-        bottom: 1rem;
-        right: 1rem;
-    }
+.profile-section {
+flex-direction: column;
+text-align: center;
+}
+
+```
+.profile-info {
+    text-align: center;
+    min-width: auto;
+}
+
+.contact-info {
+    grid-template-columns: 1fr;
+}
+
+.skills-grid {
+    grid-template-columns: 1fr;
+}
+
+.container {
+    margin: 0;
+    box-shadow: none;
+}
+
+.section {
+    padding: 1.2rem 1rem;
+}
+
+.header {
+    padding: 1.5rem 1rem;
+}
+```
+
+}
+
+@media print {
+.no-print {
+display: none !important;
+}
+
+```
+body {
+    background: white;
+    font-size: 12px;
+}
+
+.container {
+    box-shadow: none;
+    max-width: none;
+}
+
+.section {
+    padding: 1rem 1.5rem;
+    break-inside: avoid;
+}
+
+.experience-item {
+    break-inside: avoid;
+    margin-bottom: 1.2rem;
+}
+
+.header {
+    break-after: avoid;
+}
+```
+
 }
