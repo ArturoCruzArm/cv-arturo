@@ -1,13 +1,408 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Juan Arturo Cruz Armenta</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f8fafc;
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        min-height: 100vh;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .profile-section {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid rgba(255,255,255,0.3);
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .profile-info {
+        flex: 1;
+        text-align: left;
+        min-width: 300px;
+    }
+
+    .profile-info h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .profile-info h2 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .contact-item .icon {
+        font-size: 1.1rem;
+    }
+
+    .contact-item a {
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+        transition: all 0.3s ease;
+    }
+
+    .contact-item a:hover {
+        border-bottom-color: white;
+    }
+
+    .section {
+        padding: 1.8rem 2rem;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .section:last-child {
+        border-bottom: none;
+    }
+
+    .section h3 {
+        color: #2d3748;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .section h4 {
+        color: #4a5568;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .section p {
+        color: #718096;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+
+    .experience-item {
+        margin-bottom: 2rem;
+        padding: 1.2rem;
+        background: #f8fafc;
+        border-radius: 8px;
+        border-left: 4px solid #667eea;
+    }
+
+    .experience-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .company {
+        color: #667eea;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .period {
+        color: #a0aec0;
+        font-size: 0.9rem;
+        font-style: italic;
+        margin-bottom: 0.8rem;
+    }
+
+    .location {
+        color: #a0aec0;
+        font-size: 0.85rem;
+        font-style: italic;
+    }
+
+    .experience-item ul,
+    .section ul:not(.soft-skills):not(.certification-list) {
+        margin-left: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    .experience-item li,
+    .section li {
+        margin-bottom: 0.3rem;
+        color: #4a5568;
+    }
+
+    .education-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .education-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .institution {
+        color: #667eea;
+        font-weight: 500;
+    }
+
+    .certification-group {
+        margin-bottom: 1.8rem;
+        padding: 1rem;
+        background: #f8fafc;
+        border-radius: 6px;
+    }
+
+    .certification-group:last-child {
+        margin-bottom: 0;
+    }
+
+    .certification-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0.3rem;
+        margin-top: 0.5rem;
+        list-style: none;
+        margin-left: 0;
+    }
+
+    .certification-list li {
+        background: #e6fffa;
+        color: #234e52;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .skills-column ul {
+        margin-left: 1rem;
+    }
+
+    .skills-column li {
+        margin-bottom: 0.5rem;
+        color: #4a5568;
+    }
+
+    .skills-column strong {
+        color: #2d3748;
+    }
+
+    .soft-skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0.5rem;
+        list-style: none;
+        margin-left: 0;
+    }
+
+    .soft-skills li {
+        background: #f0fff4;
+        color: #22543d;
+        padding: 0.6rem 1rem;
+        border-radius: 6px;
+        border-left: 3px solid #38a169;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 1.5rem;
+        background: #f8fafc;
+        color: #a0aec0;
+        font-size: 0.85rem;
+    }
+
+    .print-button-container {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 1000;
+    }
+
+    .print-button {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 1rem 1.5rem;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        transition: all 0.3s ease;
+    }
+
+    .print-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    }
+
+    .print-instructions {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .instructions-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        max-width: 500px;
+        text-align: left;
+    }
+
+    .instructions-content h3 {
+        color: #2d3748;
+        margin-bottom: 1rem;
+    }
+
+    .instructions-content ul {
+        margin: 1rem 0;
+    }
+
+    .instructions-content li {
+        margin-bottom: 0.5rem;
+        color: #4a5568;
+    }
+
+    .close-btn {
+        background: #667eea;
+        color: white;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+        .profile-section {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .profile-info {
+            text-align: center;
+            min-width: auto;
+        }
+
+        .contact-info {
+            grid-template-columns: 1fr;
+        }
+
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .container {
+            margin: 0;
+            box-shadow: none;
+        }
+
+        .section {
+            padding: 1.2rem 1rem;
+        }
+
+        .header {
+            padding: 1.5rem 1rem;
+        }
+    }
+
+    @media print {
+        .no-print {
+            display: none !important;
+        }
+
+        body {
+            background: white;
+            font-size: 12px;
+        }
+
+        .container {
+            box-shadow: none;
+            max-width: none;
+        }
+
+        .section {
+            padding: 1rem 1.5rem;
+            break-inside: avoid;
+        }
+
+        .experience-item {
+            break-inside: avoid;
+            margin-bottom: 1.2rem;
+        }
+
+        .header {
+            break-after: avoid;
+        }
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+```
+
 </head>
 <body>
     <div class="container">
@@ -16,22 +411,22 @@
                 <img src="Captura.JPG" alt="Juan Arturo Cruz Armenta" class="profile-image">
                 <div class="profile-info">
                     <h1>Juan Arturo Cruz Armenta</h1>
-                    <h2>Programador .NET | Desarrollador de Aplicaciones Web | Ingeniero en Sistemas</h2>
+                    <h2>Especialista en Redes y Ciberseguridad | Soporte Técnico | Defensa Perimetral | Ingeniero en Sistemas</h2>
                     <div class="contact-info">
                         <div class="contact-item">
-                            <span class="icon">📞</span>
+                            <span class="icon">Tel:</span>
                             <span>477 920 3776</span>
                         </div>
                         <div class="contact-item">
-                            <span class="icon">📧</span>
+                            <span class="icon">Email:</span>
                             <span>juanarturocruzarmeta@outlook.com</span>
                         </div>
                         <div class="contact-item">
-                            <span class="icon">🔗</span>
+                            <span class="icon">LinkedIn:</span>
                             <a href="https://www.linkedin.com/in/juanarturocruzarmenta/" target="_blank">LinkedIn</a>
                         </div>
                         <div class="contact-item">
-                            <span class="icon">📍</span>
+                            <span class="icon">Ubicación:</span>
                             <span>León, Guanajuato, México</span>
                         </div>
                     </div>
@@ -39,228 +434,239 @@
             </div>
         </header>
 
-        <section class="section">
-            <h3>🎯 Perfil Profesional</h3>
-            <p>Ingeniero en Sistemas Computacionales con sólida formación académica y 4+ años de experiencia como Analista Programador Web. Certificado en múltiples tecnologías por Fundación Carlos Slim, Sololearn y Cisco. Especializado en desarrollo de aplicaciones web con dominio de 13 lenguajes de programación. Experiencia en organización de eventos tecnológicos, desarrollo de contenido digital, soluciones e-commerce y emprendimiento en el sector de reparación de equipos de cómputo.</p>
-        </section>
+```
+    <section class="section">
+        <h3>Perfil Profesional</h3>
+        <p>Ingeniero en Sistemas Computacionales especializado en redes, ciberseguridad y soporte técnico con 4+ años de experiencia práctica. Certificado CCNA en Routing & Switching con expertise en configuración de firewalls, telemetría, defensa perimetral y administración de infraestructura de red. Sólida experiencia en resolución de incidentes, análisis de vulnerabilidades y implementación de controles de seguridad. Combino conocimientos técnicos profundos con habilidades de liderazgo demostradas en organización de eventos tecnológicos y emprendimiento.</p>
+    </section>
 
-        <section class="section">
-            <h3>💼 Experiencia Profesional</h3>
-            
-            <div class="experience-item">
-                <h4>Analista Programador Web</h4>
-                <p class="company">Coqueta y Audaz</p>
-                <p class="period">2021 - Agosto 2025 (4 años)</p>
-                <ul>
-                    <li>Desarrollo y mantenimiento de aplicaciones web utilizando tecnologías .NET</li>
-                    <li>Análisis de requerimientos y diseño de soluciones tecnológicas</li>
-                    <li>Implementación de mejores prácticas en desarrollo de software</li>
-                    <li>Colaboración en proyectos de desarrollo full-stack</li>
-                    <li>Optimización de rendimiento de aplicaciones web</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h4>Organizador de Hackathon</h4>
-                <p class="company">Tecnológico de Monterrey - Campus Puebla</p>
-                <p class="period">2019</p>
-                <ul>
-                    <li>Coordinación y organización de evento tecnológico</li>
-                    <li>Gestión de equipos de desarrollo</li>
-                    <li>Evaluación de proyectos innovadores</li>
-                    <li>Promoción de la cultura tecnológica y emprendimiento</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h4>Propietario - Negocio de Reparación de Computadoras</h4>
-                <p class="company">Negocio Propio</p>
-                <p class="period">2012 - 2016 (4 años)</p>
-                <ul>
-                    <li>Diagnóstico y reparación de equipos de cómputo (hardware y software)</li>
-                    <li>Atención directa al cliente y gestión comercial</li>
-                    <li>Mantenimiento preventivo y correctivo de sistemas</li>
-                    <li>Instalación y configuración de redes locales</li>
-                    <li>Administración integral del negocio</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <h3>🎓 Formación Académica</h3>
-            
-            <div class="education-item">
-                <h4>Ingeniería en Sistemas Computacionales</h4>
-                <p class="institution">Universidad Virtual del Estado de Guanajuato (UVEG)</p>
-                <p class="period">Agosto 2020 - Agosto 2025</p>
-            </div>
-
-            <div class="education-item">
-                <h4>Diplomado en Edición de Video</h4>
-                <p class="institution">Auladiser.com - Modalidad Presencial</p>
-                <p class="period">2012</p>
-                <p class="location">El Campestre, León, Guanajuato</p>
-            </div>
-
-            <div class="education-item">
-                <h4>Técnico en Informática</h4>
-                <p class="institution">Centro de Estudios Tecnológicos Industrial y de Servicios No. 77 (CETIS 77)</p>
-                <p class="period">Agosto 2009 - Julio 2012</p>
-            </div>
-
-            <div class="education-item">
-                <h4>Certificado en Electrónica</h4>
-                <p class="institution">Secundaria General 5 Emperador Cuauhtémoc</p>
-                <p class="period">Agosto 2006 - Junio 2009</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h3>📚 Certificaciones y Educación Complementaria</h3>
-            
-            <div class="certification-group">
-                <h4>Certificaciones de Fundación Carlos Slim</h4>
-                <p class="period">Enero 2020 - Diciembre 2033</p>
-                <ul class="certification-list">
-                    <li>Asistente Web</li>
-                    <li>Curador de Datos</li>
-                    <li>Desarrollador de Contenido Digital</li>
-                    <li>Finder</li>
-                    <li>Técnico en Informática</li>
-                </ul>
-            </div>
-
-            <div class="certification-group">
-                <h4>Diplomado en E-commerce</h4>
-                <p class="institution">Tecnológico de León</p>
-                <p class="period">2018</p>
-            </div>
-
-            <div class="certification-group">
-                <h4>Certificación en Programación Informática</h4>
-                <p class="institution">Sololearn</p>
-                <p class="period">Enero 2018 - Diciembre 2020</p>
-                <p><strong>Lenguajes certificados:</strong> PHP, HTML, CSS, JavaScript, Python, C, C#, C++, jQuery, Ruby, Swift4, Python Core, Java, SQL</p>
-            </div>
-
-            <div class="certification-group">
-                <h4>Certificación CCNA Routing & Switching</h4>
-                <p class="institution">Cisco Networking Academy</p>
-                <p class="period">Agosto 2019 - Enero 2020</p>
-                <ul>
-                    <li>Escalamiento de redes</li>
-                    <li>Configuración routing entre redes VLAN</li>
-                    <li>Protocolo STP y EtherChannel</li>
-                    <li>Protocolo HSRP</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <h3>🛠️ Competencias Técnicas</h3>
-            
-            <div class="skills-grid">
-                <div class="skills-column">
-                    <h4>Lenguajes de Programación</h4>
-                    <ul>
-                        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, jQuery</li>
-                        <li><strong>Backend:</strong> PHP, Python, C, C#, C++, Java</li>
-                        <li><strong>Framework .NET:</strong> ASP.NET, MVC, Web API</li>
-                        <li><strong>Bases de Datos:</strong> SQL, MySQL, SQL Server</li>
-                        <li><strong>Móvil:</strong> Swift4, Android (Java/Kotlin)</li>
-                        <li><strong>Otros:</strong> Ruby, React.js</li>
-                    </ul>
-                </div>
-                
-                <div class="skills-column">
-                    <h4>Especialidades Técnicas</h4>
-                    <ul>
-                        <li>Desarrollo Web Full-stack</li>
-                        <li>Desarrollo Móvil (Android e iOS)</li>
-                        <li>Redes (CCNA Routing & Switching)</li>
-                        <li>E-commerce</li>
-                        <li>Contenido Digital</li>
-                        <li>Edición de Video</li>
-                        <li>Reparación de Hardware/Software</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h3>🏆 Logros y Proyectos Destacados</h3>
+    <section class="section">
+        <h3>Experiencia Profesional</h3>
+        
+        <div class="experience-item">
+            <h4>Especialista en Soporte, Redes y Ciberseguridad</h4>
+            <p class="company">Kodiak</p>
+            <p class="period">2021 - Agosto 2025 (4 años)</p>
             <ul>
-                <li><strong>4+ años de experiencia</strong> en desarrollo de software y reparación técnica</li>
-                <li><strong>Emprendimiento exitoso</strong> con negocio propio durante 4 años (2012-2016)</li>
-                <li><strong>13 lenguajes de programación certificados</strong> por Sololearn</li>
-                <li><strong>Certificaciones múltiples</strong> vigentes hasta 2033</li>
-                <li><strong>Organización de Hackathon</strong> en TEC Monterrey</li>
-                <li><strong>Especialización en múltiples áreas</strong>: Desarrollo, E-commerce, Redes, Video</li>
+                <li>Configuración y mantenimiento de firewalls para defensa perimetral</li>
+                <li>Implementación de sistemas de telemetría y monitoreo de red</li>
+                <li>Administración de routing avanzado y VLANs empresariales</li>
+                <li>Análisis de vulnerabilidades y aplicación de parches de seguridad</li>
+                <li>Gestión de incidentes de ciberseguridad y respuesta a amenazas</li>
+                <li>Soporte técnico especializado nivel 2 y 3</li>
+                <li>Documentación de procedimientos de seguridad y políticas de red</li>
+                <li>Colaboración en auditorías de seguridad y cumplimiento normativo</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="section">
-            <h3>🌟 Habilidades Blandas</h3>
-            <ul class="soft-skills">
-                <li>Liderazgo empresarial y trabajo en equipo</li>
-                <li>Atención al cliente y servicio técnico</li>
-                <li>Resolución de problemas complejos</li>
-                <li>Adaptabilidad a nuevas tecnologías</li>
-                <li>Comunicación efectiva</li>
-                <li>Organización de eventos</li>
-                <li>Pensamiento analítico y crítico</li>
+        <div class="experience-item">
+            <h4>Organizador de Hackathon</h4>
+            <p class="company">Tecnológico de Monterrey - Campus Puebla</p>
+            <p class="period">2019</p>
+            <ul>
+                <li>Coordinación de infraestructura de red para evento tecnológico</li>
+                <li>Gestión de seguridad informática durante el evento</li>
+                <li>Evaluación de proyectos de ciberseguridad e innovación</li>
+                <li>Promoción de la cultura de seguridad informática</li>
             </ul>
-        </section>
+        </div>
 
-        <section class="section">
-            <h3>📈 Objetivos Profesionales</h3>
-            <p>Aplicar mi experiencia en .NET, desarrollo web y emprendimiento tecnológico en una posición que me permita crecer profesionalmente, contribuir con soluciones innovadoras y formar parte de un equipo dinámico enfocado en la excelencia tecnológica y la transformación digital.</p>
-        </section>
+        <div class="experience-item">
+            <h4>Propietario - Negocio de Reparación y Soporte Técnico</h4>
+            <p class="company">Negocio Propio</p>
+            <p class="period">2012 - 2016 (4 años)</p>
+            <ul>
+                <li>Diagnóstico avanzado de equipos de cómputo y dispositivos de red</li>
+                <li>Configuración e instalación de redes locales y sistemas de seguridad</li>
+                <li>Implementación de soluciones de backup y recuperación ante desastres</li>
+                <li>Eliminación de malware y hardening de sistemas</li>
+                <li>Capacitación a usuarios en buenas prácticas de ciberseguridad</li>
+                <li>Administración integral del negocio y atención especializada</li>
+            </ul>
+        </div>
+    </section>
 
-        <footer class="footer">
-            <p><em>CV actualizado: Septiembre 2025</em></p>
-        </footer>
-    </div>
+    <section class="section">
+        <h3>Formación Académica</h3>
+        
+        <div class="education-item">
+            <h4>Ingeniería en Sistemas Computacionales</h4>
+            <p class="institution">Universidad Virtual del Estado de Guanajuato (UVEG)</p>
+            <p class="period">Agosto 2020 - Agosto 2025</p>
+        </div>
 
-    <div class="print-button-container no-print">
-        <button onclick="optimizedPrint()" class="print-button">📄 Imprimir como PDF</button>
-        <div class="print-instructions" id="printInstructions" style="display: none;">
-            <div class="instructions-content">
-                <h3>📋 Instrucciones para PDF perfecto:</h3>
+        <div class="education-item">
+            <h4>Diplomado en Edición de Video</h4>
+            <p class="institution">Auladiser.com - Modalidad Presencial</p>
+            <p class="period">2012</p>
+            <p class="location">El Campestre, León, Guanajuato</p>
+        </div>
+
+        <div class="education-item">
+            <h4>Técnico en Informática</h4>
+            <p class="institution">Centro de Estudios Tecnológicos Industrial y de Servicios No. 77 (CETIS 77)</p>
+            <p class="period">Agosto 2009 - Julio 2012</p>
+        </div>
+
+        <div class="education-item">
+            <h4>Certificado en Electrónica</h4>
+            <p class="institution">Secundaria General 5 Emperador Cuauhtémoc</p>
+            <p class="period">Agosto 2006 - Junio 2009</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Certificaciones y Educación Complementaria</h3>
+        
+        <div class="certification-group">
+            <h4>Certificación CCNA Routing & Switching</h4>
+            <p class="institution">Cisco Networking Academy</p>
+            <p class="period">Agosto 2019 - Enero 2020</p>
+            <ul>
+                <li>Escalamiento de redes empresariales</li>
+                <li>Configuración avanzada de routing entre redes VLAN</li>
+                <li>Implementación de protocolo STP y EtherChannel</li>
+                <li>Configuración de protocolo HSRP para alta disponibilidad</li>
+                <li>Troubleshooting avanzado de redes</li>
+            </ul>
+        </div>
+
+        <div class="certification-group">
+            <h4>Certificaciones de Fundación Carlos Slim</h4>
+            <p class="period">Enero 2020 - Diciembre 2033</p>
+            <ul class="certification-list">
+                <li>Técnico en Informática</li>
+                <li>Curador de Datos</li>
+                <li>Desarrollador de Contenido Digital</li>
+                <li>Finder</li>
+                <li>Asistente Web</li>
+            </ul>
+        </div>
+
+        <div class="certification-group">
+            <h4>Diplomado en E-commerce</h4>
+            <p class="institution">Tecnológico de León</p>
+            <p class="period">2018</p>
+        </div>
+
+        <div class="certification-group">
+            <h4>Certificación en Programación Informática</h4>
+            <p class="institution">Sololearn</p>
+            <p class="period">Enero 2018 - Diciembre 2020</p>
+            <p><strong>Lenguajes certificados:</strong> PHP, HTML, CSS, JavaScript, Python, C, C#, C++, jQuery, Ruby, Swift4, Python Core, Java, SQL</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Competencias Técnicas</h3>
+        
+        <div class="skills-grid">
+            <div class="skills-column">
+                <h4>Redes y Ciberseguridad</h4>
                 <ul>
-                    <li>✅ Selecciona <strong>"Guardar como PDF"</strong></li>
-                    <li>✅ Formato: <strong>A4</strong></li>
-                    <li>✅ Márgenes: <strong>Predeterminado</strong></li>
-                    <li>✅ Escala: <strong>100%</strong></li>
-                    <li>✅ Incluir gráficos de fondo: <strong>✓</strong></li>
+                    <li><strong>Routing:</strong> OSPF, EIGRP, BGP, RIPv2</li>
+                    <li><strong>Switching:</strong> VLANs, STP, EtherChannel, HSRP</li>
+                    <li><strong>Firewalls:</strong> Configuración, políticas, reglas ACL</li>
+                    <li><strong>Telemetría:</strong> SNMP, Syslog, NetFlow</li>
+                    <li><strong>Defensa Perimetral:</strong> IDS/IPS, WAF, VPN</li>
+                    <li><strong>Monitoreo:</strong> Nagios, PRTG, Wireshark</li>
+                    <li><strong>Seguridad:</strong> Análisis de vulnerabilidades, hardening</li>
                 </ul>
-                <button onclick="hideInstructions()" class="close-btn">Entendido</button>
+            </div>
+            
+            <div class="skills-column">
+                <h4>Soporte y Administración</h4>
+                <ul>
+                    <li><strong>Sistemas Operativos:</strong> Windows Server, Linux, macOS</li>
+                    <li><strong>Virtualización:</strong> VMware, Hyper-V</li>
+                    <li><strong>Bases de Datos:</strong> SQL Server, MySQL, PostgreSQL</li>
+                    <li><strong>Backup & Recovery:</strong> Veeam, Acronis</li>
+                    <li><strong>Active Directory:</strong> GPO, DNS, DHCP</li>
+                    <li><strong>Scripting:</strong> PowerShell, Bash, Python</li>
+                    <li><strong>Ticketing:</strong> ServiceNow, Jira, Zendesk</li>
+                </ul>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        function optimizedPrint() {
-            // Mostrar instrucciones primero
-            document.getElementById('printInstructions').style.display = 'flex';
-            
-            // Optimizar para impresión
-            setTimeout(() => {
-                window.print();
-            }, 500);
-        }
+    <section class="section">
+        <h3>Logros y Proyectos Destacados</h3>
+        <ul>
+            <li><strong>4+ años de experiencia</strong> en redes, ciberseguridad y soporte técnico especializado</li>
+            <li><strong>Certificación CCNA</strong> con especialización en routing y switching empresarial</li>
+            <li><strong>Implementación exitosa</strong> de sistemas de defensa perimetral y telemetría</li>
+            <li><strong>Emprendimiento técnico</strong> con enfoque en seguridad informática durante 4 años</li>
+            <li><strong>Respuesta eficiente</strong> a incidentes críticos de ciberseguridad</li>
+            <li><strong>Organización de eventos</strong> tecnológicos con enfoque en seguridad</li>
+            <li><strong>Expertise multidisciplinario</strong> en infraestructura, seguridad y soporte</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h3>Habilidades Blandas</h3>
+        <ul class="soft-skills">
+            <li>Análisis y resolución de problemas críticos</li>
+            <li>Gestión de crisis e incidentes de seguridad</li>
+            <li>Comunicación técnica efectiva</li>
+            <li>Trabajo en equipo multidisciplinario</li>
+            <li>Adaptabilidad a nuevas tecnologías</li>
+            <li>Liderazgo en proyectos técnicos</li>
+            <li>Capacitación y mentoring técnico</li>
+            <li>Pensamiento analítico y estratégico</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h3>Objetivos Profesionales</h3>
+        <p>Aplicar mi experiencia especializada en redes, ciberseguridad y defensa perimetral en una posición que me permita liderar iniciativas de seguridad informática, implementar soluciones innovadoras de telemetría y routing, y contribuir al fortalecimiento de la infraestructura tecnológica en un ambiente empresarial dinámico y orientado a la excelencia en ciberseguridad.</p>
+    </section>
+
+    <footer class="footer">
+        <p><em>CV actualizado: Septiembre 2025</em></p>
+    </footer>
+</div>
+
+<div class="print-button-container no-print">
+    <button onclick="optimizedPrint()" class="print-button">Imprimir como PDF</button>
+    <div class="print-instructions" id="printInstructions" style="display: none;">
+        <div class="instructions-content">
+            <h3>Instrucciones para PDF perfecto:</h3>
+            <ul>
+                <li>✅ Selecciona <strong>"Guardar como PDF"</strong></li>
+                <li>✅ Formato: <strong>A4</strong></li>
+                <li>✅ Márgenes: <strong>Predeterminado</strong></li>
+                <li>✅ Escala: <strong>100%</strong></li>
+                <li>✅ Incluir gráficos de fondo: <strong>✓</strong></li>
+            </ul>
+            <button onclick="hideInstructions()" class="close-btn">Entendido</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function optimizedPrint() {
+        // Mostrar instrucciones primero
+        document.getElementById('printInstructions').style.display = 'flex';
         
-        function hideInstructions() {
-            document.getElementById('printInstructions').style.display = 'none';
+        // Optimizar para impresión
+        setTimeout(() => {
+            window.print();
+        }, 500);
+    }
+    
+    function hideInstructions() {
+        document.getElementById('printInstructions').style.display = 'none';
+    }
+    
+    // Cerrar instrucciones al hacer clic fuera
+    document.addEventListener('click', function(event) {
+        const instructions = document.getElementById('printInstructions');
+        if (event.target === instructions) {
+            hideInstructions();
         }
-        
-        // Cerrar instrucciones al hacer clic fuera
-        document.addEventListener('click', function(event) {
-            const instructions = document.getElementById('printInstructions');
-            if (event.target === instructions) {
-                hideInstructions();
-            }
-        });
-    </script>
+    });
+</script>
+```
+
 </body>
 </html>
