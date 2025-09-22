@@ -4,7 +4,7 @@ Curriculum Vitae digital de Juan Arturo Cruz Armenta - Programador .NET y Desarr
 
 ## Ver CV Online
 
-Visita: [https://tuusuario.github.io/cv-arturo](https://tuusuario.github.io/cv-arturo)
+Visita: [https://github.com/ArturoCruzArm/cv-arturo](https://github.com/ArturoCruzArm/cv-arturo)
 
 ## Características
 
