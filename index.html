@@ -5,10 +5,323 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Juan Arturo Cruz Armenta</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f5f5f5;
+    }
+    
+    .container {
+        max-width: 210mm;
+        margin: 0 auto;
+        background: white;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    
+    .header {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 40px;
+    }
+    
+    .profile-section {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+    }
+    
+    .profile-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    
+    .profile-info h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    
+    .profile-info h2 {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        opacity: 0.95;
+    }
+    
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        font-size: 14px;
+    }
+    
+    .contact-item {
+        display: flex;
+        gap: 8px;
+    }
+    
+    .contact-item .icon {
+        font-weight: 600;
+    }
+    
+    .contact-item a {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    .section {
+        padding: 30px 40px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .section:last-of-type {
+        border-bottom: none;
+    }
+    
+    .section h3 {
+        color: #1e3c72;
+        font-size: 24px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #2a5298;
+        display: inline-block;
+    }
+    
+    .section p {
+        text-align: justify;
+        margin-bottom: 15px;
+    }
+    
+    .experience-item, .education-item, .certification-group {
+        margin-bottom: 25px;
+    }
+    
+    .experience-item:last-child, .education-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .experience-item h4, .education-item h4, .certification-group h4 {
+        color: #2a5298;
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .company, .institution {
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 5px;
+    }
+    
+    .period, .location {
+        color: #777;
+        font-style: italic;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    
+    ul {
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    
+    li {
+        margin-bottom: 8px;
+    }
+    
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .skills-column h4 {
+        color: #2a5298;
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+    
+    .skills-column ul {
+        margin-left: 0;
+        list-style: none;
+    }
+    
+    .skills-column li {
+        padding-left: 20px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    
+    .skills-column li:before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #2a5298;
+        font-weight: bold;
+    }
+    
+    .soft-skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        list-style: none;
+        margin-left: 0;
+    }
+    
+    .soft-skills li {
+        padding-left: 25px;
+        position: relative;
+    }
+    
+    .soft-skills li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #2a5298;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    .certification-list {
+        columns: 2;
+        column-gap: 20px;
+    }
+    
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background: #f9f9f9;
+        color: #777;
+        font-size: 14px;
+    }
+    
+    .print-button-container {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 1000;
+    }
+    
+    .print-button {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 16px;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        font-weight: 600;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .print-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    
+    .print-instructions {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+    }
+    
+    .instructions-content {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 500px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+    
+    .instructions-content h3 {
+        color: #1e3c72;
+        margin-bottom: 20px;
+    }
+    
+    .instructions-content ul {
+        margin: 20px 0;
+    }
+    
+    .instructions-content li {
+        margin-bottom: 10px;
+    }
+    
+    .close-btn {
+        background: #2a5298;
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+    
+    @media print {
+        body {
+            background: white;
+        }
+        
+        .container {
+            box-shadow: none;
+            max-width: 100%;
+        }
+        
+        .no-print {
+            display: none !important;
+        }
+        
+        .section {
+            page-break-inside: avoid;
+        }
+        
+        .experience-item, .education-item {
+            page-break-inside: avoid;
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .profile-section {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .contact-info {
+            grid-template-columns: 1fr;
+        }
+        
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .soft-skills {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+```
+
 </head>
 <body>
     <div class="container">
@@ -17,7 +330,7 @@
                 <img src="Captura.JPG" alt="Juan Arturo Cruz Armenta" class="profile-image">
                 <div class="profile-info">
                     <h1>Juan Arturo Cruz Armenta</h1>
-                    <h2>Especialista en Redes y Ciberseguridad | Soporte Técnico | Defensa Perimetral | Ingeniero en Sistemas</h2>
+                    <h2>Asesor Comercial | Especialista en Atención al Cliente | Ingeniero en Sistemas</h2>
                     <div class="contact-info">
                         <div class="contact-item">
                             <span class="icon">Tel:</span>
@@ -43,25 +356,24 @@
 ```
     <section class="section">
         <h3>Perfil Profesional</h3>
-        <p>Ingeniero en Sistemas Computacionales especializado en redes, ciberseguridad y soporte técnico con 4+ años de experiencia práctica. Certificado CCNA en Routing & Switching con expertise en configuración de firewalls, telemetría, defensa perimetral y administración de infraestructura de red. Sólida experiencia en resolución de incidentes, análisis de vulnerabilidades y implementación de controles de seguridad. Combino conocimientos técnicos profundos con habilidades de liderazgo demostradas en organización de eventos tecnológicos y emprendimiento.</p>
+        <p>Profesional con sólida experiencia en atención al cliente, ventas y gestión de relaciones comerciales. Ingeniero en Sistemas con 4+ años de experiencia en soporte especializado y 4 años como propietario de negocio propio, desarrollando habilidades clave en prospección de clientes, cierre de ventas y servicio postventa. Destaco por mi capacidad de comunicación efectiva, orientación a resultados y habilidad para construir relaciones de confianza con los clientes. Busco aplicar mi experiencia comercial y técnica en el sector inmobiliario, contribuyendo al crecimiento de Ciudad Maderas.</p>
     </section>
 
     <section class="section">
         <h3>Experiencia Profesional</h3>
         
         <div class="experience-item">
-            <h4>Especialista en Soporte, Redes y Ciberseguridad</h4>
+            <h4>Especialista en Atención al Cliente y Soporte</h4>
             <p class="company">Kodiak</p>
             <p class="period">2021 - Agosto 2025 (4 años)</p>
             <ul>
-                <li>Configuración y mantenimiento de firewalls para defensa perimetral</li>
-                <li>Implementación de sistemas de telemetría y monitoreo de red</li>
-                <li>Administración de routing avanzado y VLANs empresariales</li>
-                <li>Análisis de vulnerabilidades y aplicación de parches de seguridad</li>
-                <li>Gestión de incidentes de ciberseguridad y respuesta a amenazas</li>
-                <li>Soporte técnico especializado nivel 2 y 3</li>
-                <li>Documentación de procedimientos de seguridad y políticas de red</li>
-                <li>Colaboración en auditorías de seguridad y cumplimiento normativo</li>
+                <li>Atención personalizada a clientes corporativos, identificando necesidades y ofreciendo soluciones técnicas especializadas</li>
+                <li>Gestión de relaciones a largo plazo con cartera de clientes empresariales</li>
+                <li>Resolución efectiva de incidentes con enfoque en satisfacción del cliente</li>
+                <li>Asesoría técnica y comercial para la implementación de soluciones tecnológicas</li>
+                <li>Documentación de casos y seguimiento postventa para garantizar la excelencia en el servicio</li>
+                <li>Colaboración con equipos multidisciplinarios para cumplir objetivos comerciales</li>
+                <li>Capacitación a usuarios finales y presentaciones de productos/servicios</li>
             </ul>
         </div>
 
@@ -70,10 +382,10 @@
             <p class="company">Tecnológico de Monterrey - Campus Puebla</p>
             <p class="period">2019</p>
             <ul>
-                <li>Coordinación de infraestructura de red para evento tecnológico</li>
-                <li>Gestión de seguridad informática durante el evento</li>
-                <li>Evaluación de proyectos de ciberseguridad e innovación</li>
-                <li>Promoción de la cultura de seguridad informática</li>
+                <li>Coordinación de evento tecnológico con más de 100 participantes</li>
+                <li>Gestión de relaciones con patrocinadores y stakeholders</li>
+                <li>Logística y organización de actividades grupales</li>
+                <li>Promoción del evento y captación de participantes</li>
             </ul>
         </div>
 
@@ -82,12 +394,13 @@
             <p class="company">Negocio Propio</p>
             <p class="period">2012 - 2016 (4 años)</p>
             <ul>
-                <li>Diagnóstico avanzado de equipos de cómputo y dispositivos de red</li>
-                <li>Configuración e instalación de redes locales y sistemas de seguridad</li>
-                <li>Implementación de soluciones de backup y recuperación ante desastres</li>
-                <li>Eliminación de malware y hardening de sistemas</li>
-                <li>Capacitación a usuarios en buenas prácticas de ciberseguridad</li>
-                <li>Administración integral del negocio y atención especializada</li>
+                <li>Prospección activa de clientes en la zona de León, Guanajuato</li>
+                <li>Venta de productos y servicios tecnológicos con cierre exitoso de negociaciones</li>
+                <li>Atención personalizada y construcción de base de clientes recurrentes</li>
+                <li>Gestión integral del negocio: finanzas, inventario, marketing y operaciones</li>
+                <li>Servicio postventa y fidelización de clientes</li>
+                <li>Desarrollo de estrategias comerciales para incrementar ventas</li>
+                <li>Manejo de objeciones y negociación con clientes diversos</li>
             </ul>
         </div>
     </section>
@@ -102,10 +415,15 @@
         </div>
 
         <div class="education-item">
+            <h4>Diplomado en E-commerce</h4>
+            <p class="institution">Tecnológico de León</p>
+            <p class="period">2018</p>
+        </div>
+
+        <div class="education-item">
             <h4>Diplomado en Edición de Video</h4>
             <p class="institution">Auladiser.com - Modalidad Presencial</p>
             <p class="period">2012</p>
-            <p class="location">El Campestre, León, Guanajuato</p>
         </div>
 
         <div class="education-item">
@@ -113,30 +431,11 @@
             <p class="institution">Centro de Estudios Tecnológicos Industrial y de Servicios No. 77 (CETIS 77)</p>
             <p class="period">Agosto 2009 - Julio 2012</p>
         </div>
-
-        <div class="education-item">
-            <h4>Certificado en Electrónica</h4>
-            <p class="institution">Secundaria General 5 Emperador Cuauhtémoc</p>
-            <p class="period">Agosto 2006 - Junio 2009</p>
-        </div>
     </section>
 
     <section class="section">
-        <h3>Certificaciones y Educación Complementaria</h3>
+        <h3>Certificaciones Relevantes</h3>
         
-        <div class="certification-group">
-            <h4>Certificación CCNA Routing & Switching</h4>
-            <p class="institution">Cisco Networking Academy</p>
-            <p class="period">Agosto 2019 - Enero 2020</p>
-            <ul>
-                <li>Escalamiento de redes empresariales</li>
-                <li>Configuración avanzada de routing entre redes VLAN</li>
-                <li>Implementación de protocolo STP y EtherChannel</li>
-                <li>Configuración de protocolo HSRP para alta disponibilidad</li>
-                <li>Troubleshooting avanzado de redes</li>
-            </ul>
-        </div>
-
         <div class="certification-group">
             <h4>Certificaciones de Fundación Carlos Slim</h4>
             <p class="period">Enero 2020 - Diciembre 2033</p>
@@ -144,91 +443,88 @@
                 <li>Técnico en Informática</li>
                 <li>Curador de Datos</li>
                 <li>Desarrollador de Contenido Digital</li>
-                <li>Finder</li>
+                <li>Finder (Prospección Digital)</li>
                 <li>Asistente Web</li>
             </ul>
         </div>
 
         <div class="certification-group">
-            <h4>Diplomado en E-commerce</h4>
-            <p class="institution">Tecnológico de León</p>
-            <p class="period">2018</p>
-        </div>
-
-        <div class="certification-group">
-            <h4>Certificación en Programación Informática</h4>
-            <p class="institution">Sololearn</p>
-            <p class="period">Enero 2018 - Diciembre 2020</p>
-            <p><strong>Lenguajes certificados:</strong> PHP, HTML, CSS, JavaScript, Python, C, C#, C++, jQuery, Ruby, Swift4, Python Core, Java, SQL</p>
+            <h4>Certificación CCNA Routing & Switching</h4>
+            <p class="institution">Cisco Networking Academy</p>
+            <p class="period">Agosto 2019 - Enero 2020</p>
         </div>
     </section>
 
     <section class="section">
-        <h3>Competencias Técnicas</h3>
+        <h3>Competencias Comerciales y Técnicas</h3>
         
         <div class="skills-grid">
             <div class="skills-column">
-                <h4>Redes y Ciberseguridad</h4>
+                <h4>Habilidades Comerciales</h4>
                 <ul>
-                    <li><strong>Routing:</strong> OSPF, EIGRP, BGP, RIPv2</li>
-                    <li><strong>Switching:</strong> VLANs, STP, EtherChannel, HSRP</li>
-                    <li><strong>Firewalls:</strong> Configuración, políticas, reglas ACL</li>
-                    <li><strong>Telemetría:</strong> SNMP, Syslog, NetFlow</li>
-                    <li><strong>Defensa Perimetral:</strong> IDS/IPS, WAF, VPN</li>
-                    <li><strong>Monitoreo:</strong> Nagios, PRTG, Wireshark</li>
-                    <li><strong>Seguridad:</strong> Análisis de vulnerabilidades, hardening</li>
+                    <li>Prospección y generación de leads</li>
+                    <li>Técnicas de cierre de ventas</li>
+                    <li>Negociación efectiva</li>
+                    <li>Atención al cliente de excelencia</li>
+                    <li>Manejo de objeciones</li>
+                    <li>Seguimiento postventa</li>
+                    <li>Construcción de relaciones a largo plazo</li>
+                    <li>Presentaciones comerciales</li>
                 </ul>
             </div>
             
             <div class="skills-column">
-                <h4>Soporte y Administración</h4>
+                <h4>Competencias Adicionales</h4>
                 <ul>
-                    <li><strong>Sistemas Operativos:</strong> Windows Server, Linux, macOS</li>
-                    <li><strong>Virtualización:</strong> VMware, Hyper-V</li>
-                    <li><strong>Bases de Datos:</strong> SQL Server, MySQL, PostgreSQL</li>
-                    <li><strong>Backup & Recovery:</strong> Veeam, Acronis</li>
-                    <li><strong>Active Directory:</strong> GPO, DNS, DHCP</li>
-                    <li><strong>Scripting:</strong> PowerShell, Bash, Python</li>
-                    <li><strong>Ticketing:</strong> ServiceNow, Jira, Zendesk</li>
+                    <li>Gestión de CRM y bases de datos</li>
+                    <li>Marketing digital y redes sociales</li>
+                    <li>Manejo de herramientas ofimáticas</li>
+                    <li>E-commerce y ventas online</li>
+                    <li>Análisis de datos para toma de decisiones</li>
+                    <li>Gestión de proyectos</li>
+                    <li>Organización de eventos</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section class="section">
-        <h3>Logros y Proyectos Destacados</h3>
-        <ul>
-            <li><strong>4+ años de experiencia</strong> en redes, ciberseguridad y soporte técnico especializado</li>
-            <li><strong>Certificación CCNA</strong> con especialización en routing y switching empresarial</li>
-            <li><strong>Implementación exitosa</strong> de sistemas de defensa perimetral y telemetría</li>
-            <li><strong>Emprendimiento técnico</strong> con enfoque en seguridad informática durante 4 años</li>
-            <li><strong>Respuesta eficiente</strong> a incidentes críticos de ciberseguridad</li>
-            <li><strong>Organización de eventos</strong> tecnológicos con enfoque en seguridad</li>
-            <li><strong>Expertise multidisciplinario</strong> en infraestructura, seguridad y soporte</li>
+        <h3>Habilidades Personales</h3>
+        <ul class="soft-skills">
+            <li>Excelente comunicación verbal y escrita</li>
+            <li>Orientación a resultados y cumplimiento de metas</li>
+            <li>Adaptabilidad y flexibilidad horaria</li>
+            <li>Trabajo en equipo y colaboración</li>
+            <li>Proactividad e iniciativa</li>
+            <li>Resolución efectiva de problemas</li>
+            <li>Actitud positiva y entusiasta</li>
+            <li>Capacidad de aprendizaje rápido</li>
+            <li>Organización y gestión del tiempo</li>
+            <li>Empatía y escucha activa</li>
+            <li>Perseverancia y manejo de presión</li>
+            <li>Liderazgo y capacidad emprendedora</li>
         </ul>
     </section>
 
     <section class="section">
-        <h3>Habilidades Blandas</h3>
-        <ul class="soft-skills">
-            <li>Análisis y resolución de problemas críticos</li>
-            <li>Gestión de crisis e incidentes de seguridad</li>
-            <li>Comunicación técnica efectiva</li>
-            <li>Trabajo en equipo multidisciplinario</li>
-            <li>Adaptabilidad a nuevas tecnologías</li>
-            <li>Liderazgo en proyectos técnicos</li>
-            <li>Capacitación y mentoring técnico</li>
-            <li>Pensamiento analítico y estratégico</li>
+        <h3>Logros Destacados</h3>
+        <ul>
+            <li><strong>4 años de experiencia</strong> como propietario de negocio propio con resultados exitosos en ventas y fidelización de clientes</li>
+            <li><strong>4+ años en atención al cliente</strong> corporativo con alto índice de satisfacción</li>
+            <li><strong>Experiencia en prospección</strong> y cierre de ventas en entorno competitivo</li>
+            <li><strong>Capacidad demostrada</strong> para alcanzar objetivos comerciales y superar metas</li>
+            <li><strong>Experiencia en organización</strong> de eventos masivos con coordinación de múltiples stakeholders</li>
+            <li><strong>Perfil técnico</strong> que facilita comprensión de productos complejos y asesoría especializada</li>
         </ul>
     </section>
 
     <section class="section">
         <h3>Objetivos Profesionales</h3>
-        <p>Aplicar mi experiencia especializada en redes, ciberseguridad y defensa perimetral en una posición que me permita liderar iniciativas de seguridad informática, implementar soluciones innovadoras de telemetría y routing, y contribuir al fortalecimiento de la infraestructura tecnológica en un ambiente empresarial dinámico y orientado a la excelencia en ciberseguridad.</p>
+        <p>Integrarme al equipo de Ciudad Maderas como Asesor Inmobiliario, aplicando mi experiencia en ventas, atención al cliente y prospección para contribuir al crecimiento de la empresa. Busco desarrollarme profesionalmente en el sector inmobiliario, aprovechando las oportunidades de capacitación, crecimiento y los beneficios que ofrece Ciudad Maderas, mientras ayudo a las familias mexicanas a encontrar el hogar de sus sueños.</p>
     </section>
 
     <footer class="footer">
-        <p><em>CV actualizado: Septiembre 2025</em></p>
+        <p><em>CV actualizado: Octubre 2025</em></p>
     </footer>
 </div>
 
