@@ -1,61 +1,21 @@
 # CV - Juan Arturo Cruz Armenta
 
-## Especialista en Redes y Ciberseguridad | Soporte Técnico | Defensa Perimetral
+Version actualizada para postulaciones de TI, soporte, infraestructura, ERP, Business Intelligence y Estadia Profesional UVEG.
 
-Curriculum Vitae digital profesional optimizado para GitHub Pages con diseño responsivo y funcionalidad de impresión PDF.
+## Perfil usado
 
-### 🌟 Características
+- Analista Programador Web y Soporte de Sistemas.
+- Experiencia industrial en Grupo Coqueta y Audaz / Operaciones Kodiak, MAB y Cuali.
+- PHP, Yii2, JavaScript, Node.js, SQL, Firebird y MySQL.
+- ERP/sistemas: Curtits, Microsip, SIMAC, Magnus, MP Software y SIGEK.
+- Windows Server, CentOS, Cisco y Fortinet.
+- Estudiante activo UVEG con 80% de avance y Estadia Profesional de 480 horas / 6 meses.
 
-- ✅ Diseño profesional y moderno
-- ✅ Completamente responsivo (móvil, tablet, desktop)
-- ✅ Optimizado para impresión PDF
-- ✅ Compatible con GitHub Pages
-- ✅ Sin emojis - Formato completamente profesional
-- ✅ Enfoque especializado en redes y ciberseguridad
-- ✅ Botón de imprimir integrado con instrucciones
-- ✅ Tipografía Inter de Google Fonts
+## Cambios importantes
 
-### 🚀 Acceso Rápido
+- Se corrigio Cuali.
+- Se conservo Ai Lab.
+- Se retiraron CURP, RFC y datos privados de las versiones publicas.
+- Se quito el enfoque inmobiliario y las tecnologias no alineadas al perfil actual.
 
-**Ver CV online:** <https://arturocruzarm.github.io/cv-arturo>
-
-### 📋 Especialización Técnica
-
-- **Redes:** CCNA Routing & Switching, VLANs, OSPF, EIGRP, BGP
-- **Ciberseguridad:** Firewalls, IDS/IPS, análisis de vulnerabilidades
-- **Defensa Perimetral:** WAF, VPN, hardening de sistemas
-- **Telemetría:** SNMP, Syslog, NetFlow, monitoreo de red
-- **Soporte:** Nivel 2 y 3, gestión de incidentes, troubleshooting
-
-### 📄 Cómo generar PDF
-
-1. Abre el CV en tu navegador
-1. Haz clic en el botón “Imprimir como PDF”
-1. En la ventana de impresión:
-- Destino: “Guardar como PDF”
-- Formato: A4
-- Márgenes: Predeterminado
-- Escala: 100%
-- ✅ Incluir gráficos de fondo
-
-### 🛠️ Estructura del proyecto
-
-```
-cv-arturo/
-├── index.html          # Página principal del CV
-├── styles.css          # Estilos optimizados para web y PDF
-├── Captura.JPG         # Foto de perfil
-├── README.md           # Este archivo
-└── .github/
-    └── workflows/
-        └── pages.yml    # Configuración de GitHub Pages
-```
-
-### 🔧 Configuración de GitHub Pages
-
-1. Ve a **Settings → Pages** en tu repositorio
-1. En **Source** selecciona **“GitHub Actions”**
-1. El workflow se ejecutará automáticamente en cada push a `main`
-1. Tu CV estará disponible en: `https://tuusuario.github.io/cv-arturo`
-
-### 
+Abrir `index.html` en el navegador y usar el boton de imprimir para guardar PDF.
