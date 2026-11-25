@@ -1,0 +1,20 @@
+# Juan Arturo Cruz Armenta
+
+> Analista Programador Web, Especialista en Integración ERP, Bases de Datos e Infraestructura TI en León, Guanajuato, México.
+
+## Perfil Profesional
+- **Nombre:** Juan Arturo Cruz Armenta
+- **Ubicación:** León, Guanajuato, México
+- **Formación:** Ingeniería en Sistemas Computacionales (UVEG — 80% de avance, 33 materias aprobadas, disponible para Estadía Profesional de 480 horas; estudios previos en Instituto Tecnológico de León)
+- **Idiomas:** Español nativo, Inglés B2 (intermedio alto)
+- **Sitio oficial / CV:** https://juan-arturo.invitados.org/
+- **Portafolio interactivo:** https://portfolio-personal.invitados.org/
+- **LinkedIn:** https://www.linkedin.com/in/juanarturocruzarmenta/
+- **GitHub:** https://github.com/ArturoCruzArm
+- **Contacto:** juanarturocruzarmenta@outlook.com | +52 477 920 3776
+
+## Fortalezas Diferenciadoras
+1. **Digitalización Industrial y ERP:** Integración y consulta de 6 sistemas empresariales (Curtits, Microsip, SIMAC, Magnus, MP Software, SIGEK) para producción, pedidos, pesaje, etiquetado, tarimas, mantenimiento y trazabilidad operativa.
+2. **Desarrollo Web y Bases de Datos:** PHP, Yii2, JavaScript, Node.js, SQL, optimización y conciliación en Firebird y MySQL.
+3. **Infraestructura, Redes y Seguridad:** Administración de servidores virtualizados Windows Server y CentOS, switching Cisco Catalyst, wireless y seguridad perimetral Fortinet.
+4. **Proyectos Destacados:** Desarrollo de aplicación web para el Consulado de México en EE.UU. y kiosco interactivo con realidad aumentada (Ai Lab); diseño lógico de topología de red de fibra óptica para León (ZTE); soporte y soluciones web en Foro 7 Producciones.
